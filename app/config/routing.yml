@@ -1,0 +1,21 @@
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal
+
+_welcome:
+    pattern:  /
+    defaults: { _controller: AcmeDemoBundle:Welcome:index }
+
+#_demo_secured:
+#    resource: "@AcmeDemoBundle/Controller/SecuredController.php"
+#    type:     annotation
+
+_demo:
+    pattern: /demo
+    defaults: { _controller: AcmeDemoBundle:Demo:index }
+
+_demo_hello:
+    pattern: /demo/hello/{name}
+    defaults: { _controller: my_controller:helloAction }
+
