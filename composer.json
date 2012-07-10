@@ -17,8 +17,7 @@
         "sensio/framework-extra-bundle": "dev-master",
         "sensio/generator-bundle": "dev-master",
         "jms/security-extra-bundle": "1.1.*",
-        "jms/di-extra-bundle": "1.0.*",
-        "sonata-project/admin-bundle": "1.0.*"
+        "jms/di-extra-bundle": "1.0.*"
     },
     "scripts": {
         "post-install-cmd": [
