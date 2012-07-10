@@ -1,0 +1,6 @@
+# controllers are implemented as services
+# no annotations are used
+
+WSLDemoBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: demo_controller:indexAction }

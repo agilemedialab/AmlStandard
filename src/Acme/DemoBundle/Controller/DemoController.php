@@ -6,8 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Acme\DemoBundle\Form\ContactType;
 
-// these import the "@Route" and "@Template" annotations
-
 class DemoController extends Controller
 {
     public function __construct($templating) {

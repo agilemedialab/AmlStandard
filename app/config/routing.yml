@@ -1,3 +1,7 @@
+WSLDemoBundle:
+    resource: "@WSLDemoBundle/Resources/config/routing.yml"
+    prefix:   /
+
 # Internal routing configuration to handle ESI
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
@@ -7,7 +11,7 @@ _welcome:
     pattern:  /
     defaults: { _controller: AcmeDemoBundle:Welcome:index }
 
-#_demo_secured:
+# _demo_secured:
 #    resource: "@AcmeDemoBundle/Controller/SecuredController.php"
 #    type:     annotation
 
