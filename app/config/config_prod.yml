@@ -7,6 +7,10 @@ imports:
 #        result_cache_driver: apc
 #        query_cache_driver: apc
 
+parameters:
+    router.options.matcher.cache_class: ~ # disable router cache
+    router.options.matcher_class: Symfony\Component\Routing\Matcher\ApacheUrlMatcher
+
 monolog:
     handlers:
         main:
