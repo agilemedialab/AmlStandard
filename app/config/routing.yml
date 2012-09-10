@@ -11,13 +11,29 @@ _welcome:
     pattern:  /
     defaults: { _controller: AcmeDemoBundle:Welcome:index }
 
-# _demo_secured:
-#    resource: "@AcmeDemoBundle/Controller/SecuredController.php"
-#    type:     annotation
+_demo_login:
+    pattern: /demo/secured/login
+    defaults: { _controller: AcmeDemoBundle:Secured:login }
+
+_demo_secured_hello:
+    pattern: /demo/secured/hello/{name}
+    defaults: { _controller: AcmeDemoBundle:Secured:hello }
+
+_demo_secured_hello_admin:
+    pattern: /demo/secured/hello/admin/{name}
+    defaults: { _controller: AcmeDemoBundle:Secured:helloadmin }
+
+_security_check:
+    pattern: /demo/secured/login_check
+    defaults: { _controller: AcmeDemoBundle:Secured:securityCheck }
+
+_demo_logout:
+    pattern: /demo/secured/login
+    defaults: { _controller: AcmeDemoBundle:Secured:logout }
 
 _demo:
     pattern: /demo
-    defaults: { _controller: AcmeDemoBundle:Demo:index }
+    defaults: { _controller: my_controller:indexAction }
 
 _demo_hello:
     pattern: /demo/hello/{name}

@@ -14,7 +14,7 @@ class DemoController extends Controller
 
     public function indexAction()
     {
-        return $this->render('AcmeDemoBundle:Demo:index.html.twig');
+        return $this->templating->renderResponse('AcmeDemoBundle:Demo:index.html.twig');
     }
 
     public function helloAction($name)

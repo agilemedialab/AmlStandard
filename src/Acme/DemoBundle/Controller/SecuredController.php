@@ -25,10 +25,12 @@ class SecuredController extends Controller
             $error = $this->get('request')->getSession()->get(SecurityContext::AUTHENTICATION_ERROR);
         }
 
-        return array(
-            'last_username' => $this->get('request')->getSession()->get(SecurityContext::LAST_USERNAME),
-            'error'         => $error,
-        );
+        return $this->render('AcmeDemoBundle:Secured:login.html.twig', 
+            array(
+                'last_username' => $this->get('request')->getSession()->get(SecurityContext::LAST_USERNAME),
+                'error'         => $error,
+                )
+            );
     }
 
     /**
@@ -47,23 +49,17 @@ class SecuredController extends Controller
         // The security layer will intercept this request
     }
 
-    /**
-     * @Route("/hello", defaults={"name"="World"}),
-     * @Route("/hello/{name}", name="_demo_secured_hello")
-     * @Template()
-     */
     public function helloAction($name)
     {
-        return array('name' => $name);
+        return $this->render('AcmeDemoBundle:Secured:hello.html.twig', 
+            array('name' => $name)
+            );
     }
 
-    /**
-     * @Route("/hello/admin/{name}", name="_demo_secured_hello_admin")
-     * @Secure(roles="ROLE_ADMIN")
-     * @Template()
-     */
     public function helloadminAction($name)
     {
-        return array('name' => $name);
+        return $this->render('AcmeDemoBundle:Secured:helloadmin.html.twig', 
+            array('name' => $name)
+            );
     }
 }
