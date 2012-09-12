@@ -9,6 +9,10 @@
         <service id="demo_controller" class="WSL\DemoBundle\Controller\DemoController">
             <argument type="service" id="templating" />
         </service>
+        
+       <service id="testing_controller" class="WSL\DemoBundle\Controller\TestingController">
+            <argument type="service" id="templating" />
+        </service>
     </services>
-
+    
 </container>

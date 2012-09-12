@@ -4,3 +4,7 @@
 WSLDemoBundle_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: demo_controller:indexAction }
+    
+WSLDemoBundle_testingpage:
+    pattern:  /testing/{name}
+    defaults: { _controller: testing_controller:indexAction }
